@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido {
+    background: #c1e7ea;
+    height: 100%;
+    position: relative;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    animation: anochecer 10s linear forwards;
+    animation-delay: 10s;
+}
+
+@keyframes anochecer {
+    0% {
+        background: #c1e7ea;
+    }
+    50% {
+        background: #6a6a6a;
+    }
+    100% {
+        background: #03084e;
+    }
+}
+
+.luna {
+    width: 120px;
+    height: 120px;
+    background-color: #989cb7;
+    box-shadow: 0px 0px 100px #fffff0;
+    position: absolute;
+    top: 30px;
+    left: 40%;
+    border-radius: 50%;
+    animation: aparecer 7s linear forwards;
+    animation-delay: 10s;
+    opacity: 0;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.nube {
+    width: 150px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 100px;
+    position: absolute;
+    animation: moverse 30s;
+}
+
+.n1 {
+    top: 50px;
+    left: 50px;
+    animation: moverse1 60s linear;
+}
+
+@keyframes moverse1 {
+    0% {
+        top: 50px;
+        left: 50px;
+    }
+    100% {
+        top: 50px;
+        left: 100%;
+    }
+}
+
+.n2 {
+    top: 150px;
+    left: 100px;
+    animation: moverse2 90s linear;
+}
+
+@keyframes moverse2 {
+    0% {
+        top: 150px;
+        left: 100px;
+    }
+    100% {
+        top: 150px;
+        left: 80%;
+    }
+}
+
+.n3 {
+    height: 80px;
+    top: 50px;
+    left: 50%;
+    animation: moverse3 50s forwards;
+}
+
+@keyframes moverse3 {
+    0% {
+        top: 50px;
+        left: 50%;
+    }
+    100% {
+        top: 50px;
+        left: 100%;
+    }
+}
+
+.sol {
+    width: 200px;
+    height: 200px;
+    background: #e6f10f;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 100px #FFFF8C;
+    animation: esconderse 20s linear forwards;
+}
+
+@keyframes esconderse {
+    0% {
+        top: 50px;
+        right: 50px;
+    }
+    100% {
+        top: 100%;
+        right: 50%;
+    }
+}
+
+
+/* HASTA AQUI PRIMERA PARTE!!! */
+
+.edificio1 {
+    margin: 0 20px;
+    width: 150px;
+    height: 400px;
+    position: relative;
+    background: #d9645b;
+}
+
+.edificio2 {
+    margin: 0 20px;
+    width: 300px;
+    height: 250px;
+    position: relative;
+    background-color: #989cb7;
+}
+
+.edificio3 {
+    margin: 0 20px;
+    width: 300px;
+    height: 180px;
+    position: relative;
+    background-color: #fa9f56;
+}
+
+.piso {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.ventana {
+    width: 40px;
+    height: 40px;
+    background-color: #4f4f57;
+    border: 2px solid #eeeef0;
+}
+
+.edificio1 .techo,
+.edificio2 .techo {
+    position: relative;
+    bottom: 10px;
+    left: 0px;
+    width: 100%;
+    height: 10px;
+    background-color: #8090aa;
+    border-radius: 10px 10px 0 0;
+}
+
+.contenedor-puerta {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+.puerta {
+    width: 60px;
+    height: 90px;
+    margin: auto;
+    background-color: #4f4f57;
+}
+
+
+/* Encendidos de luces */
+
+.e1 {
+    animation: encender .5s linear forwards;
+    animation-delay: 15s;
+}
+
+.e2 {
+    animation: encender .5s linear forwards;
+    animation-delay: 19s;
+}
+
+.e3 {
+    animation: encender .5s linear forwards;
+    animation-delay: 21s;
+}
+
+.e4 {
+    animation: encender .5s linear forwards;
+    animation-delay: 17s;
+}
+
+@keyframes encender {
+    form {
+        background-color: #4f4f57;
+    }
+    to {
+        background: linear-gradient(to top, #fafa1e, #ffcd00);
+    }
+}
+
+
+/* Sección suelo */
+
+.suelo {
+    width: 100%;
+    background-color: #999897;
+    height: 200px;
+    position: relative;
+}
+
+.suelo .vereda {
+    width: 100%;
+    height: 30px;
+    background-color: #bdd381;
+}
+
+.suelo .calle {
+    position: relative;
+    width: 100%;
+    border-top: 4px dashed #dbdbdd;
+    top: 38%;
+}
+
+.auto {
+    position: absolute;
+    width: 180px;
+    height: 100px;
+    z-index: 10;
+    top: 20px;
+    left: -180px;
+    animation: desplazarse 7s infinite linear;
+    z-index: 10;
+}
+
+.arbol {
+    margin: 0 20px;
+    z-index: 2;
+}
+
+.tronco {
+    background: #6f4a30;
+    height: 40px;
+    width: 10px;
+}
+
+.copa {
+    border-radius: 20px;
+    height: 100px;
+    width: 50px;
+    background: #a7bc77;
+    margin-left: -20px;
+}
+
+@keyframes desplazarse {
+    0% {
+        left: -180px;
+    }
+    100% {
+        left: 130%;
+    }
+}
+
+
+/* AUTO 1 */
+
+.auto .techo-auto {
+    width: 50%;
+    margin: auto;
+    background-color: #ceae97;
+    height: 40px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.auto .techo-auto .ventana-auto {
+    position: relative;
+    top: 5px;
+    height: 30px;
+    width: 30px;
+    background-color: #6786c0;
+    border-radius: 7px 7px 0 0;
+}
+
+.auto .medio {
+    width: 100%;
+    margin: auto;
+    background-color: #ceae97;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+}
+
+.auto .ruedas {
+    display: flex;
+    justify-content: space-around;
+}
+
+.auto .ruedas .rueda {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    bottom: 20px;
+}
+
+
+/* AUTO 2 */
+
+.auto2 {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    z-index: 10;
+    top: -20px;
+    right: -150px;
+    animation: desplazarse2 5s infinite linear;
+    animation-delay: 2s;
+    z-index: 2;
+}
+
+@keyframes desplazarse2 {
+    0% {
+        right: -150px;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+.auto2 .techo-auto {
+    width: 60%;
+    margin-left: 60px;
+    background-color: #d9645b;
+    height: 30px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.auto2 .techo-auto .ventana-auto {
+    position: relative;
+    top: 5px;
+    height: 30px;
+    width: 30px;
+    background-color: #6786c0;
+    border-radius: 7px 7px 0 0;
+}
+
+.auto2 .medio {
+    width: 100%;
+    margin: auto;
+    background-color: #d9645b;
+    height: 45px;
+    border-radius: 20px 0 0 0;
+}
+
+.auto2 .ruedas {
+    display: flex;
+    justify-content: space-around;
+}
+
+.auto2 .ruedas .rueda {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(43, 43, 43);
+    border-radius: 50%;
+    bottom: 20px;
+}
